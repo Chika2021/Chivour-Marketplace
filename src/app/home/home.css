@@ -1,0 +1,13 @@
+
+.heading1 {
+  color: rgb(252, 174, 6);
+}
+.herobtn {
+  background-color: rgb(252, 174, 6);
+  color: white;
+  border: none;
+}
+
+.herobtn:hover {
+  background-color: rgb(34, 33, 32);
+}
