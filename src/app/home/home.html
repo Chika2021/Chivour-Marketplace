@@ -50,55 +50,23 @@
   <h2 class="mb-4 text-center">Our Products</h2>
   <div class="row g-4">
     
-    <!-- Card 1 -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Product 1" style="width: auto; height: 304px;">
-        <div class="card-body">
-          <h5 class="card-title">Product Name 1</h5>
-          <p class="card-text">This is a short description of the product, highlighting its features and benefits.</p>
-          <h6 >$25.00</h6>
-          <div class="card-footer bg-white">
-          <a href="#" class="btn btn-dark w-100">View Details</a>
-        </div>
-        </div>
-        
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm">
-        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Product 2" style="width: auto; height: 300px;">
-        <div class="card-body">
-          <h5 class="card-title">Product Name 2</h5>
-          <p class="card-text">Another product description that gives users a reason to buy it.</p>
-          <h6>$40.00</h6>
-          <div class="card-footer bg-white">
-          <a href="#" class="btn btn-dark w-100">View Details</a>
-        </div>
-        </div>
-        
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="col-md-4">
+  <!-- @for (home of homeData; track $index) { -->
+    <div *ngFor="let home of homeData" class="col-md-4">
       <div class="card h-100 shadow-sm">
         <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  class="card-img-top" alt="Product 3" style="width: auto; height: 300px;">
         <div class="card-body">
-          <h5 class="card-title">Product Name 3</h5>
-          <p class="card-text">Highlight the best features here to encourage customers to click.</p>
-          <h6>$30.00</h6>
+          <h5 class="card-title">{{home.name}}</h5>
+          <p class="card-text">{{home.description}}</p>
+          <h6>{{home.price}}</h6>
           <div class="card-footer bg-white">
           <a href="#" class="btn btn-dark w-100">View Details</a>
-        </div>
-        
+        </div>        
       </div>
     </div>
-
   </div>
+<!-- } -->
 </div>
+
 
 <!-- Footer -->
 <footer style="background-color: rgb(252, 174, 6);" class="text-dark pt-5 pb-3 mt-5 text-white">
