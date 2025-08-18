@@ -1,0 +1,38 @@
+ <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%; border-radius: 15px;">
+      <h3 class="text-center mb-4">Login</h3>
+      
+      <form (ngSubmit)="onSubmit()">
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required [(ngModel)]="user.email" name="email">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter password" required [(ngModel)]="user.password" name="password">
+        </div>
+
+        <!-- Remember Me -->
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember me</label>
+        </div>
+
+        <!-- Login Button -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form>
+
+      <p class="text-center mt-3 mb-1">
+        <a href="#" class="text-decoration-none">Forgot Password?</a>
+      </p>
+
+      <p class="text-center mb-0">
+        Don’t have an account? <a href="/register" class="text-decoration-none">Register</a>
+      </p>
+    </div>
+  </div>

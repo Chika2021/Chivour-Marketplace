@@ -1,0 +1,43 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%; border-radius: 15px;">
+      <h3 class="text-center mb-4">Create an Account</h3>
+
+      <form (ngSubmit)="onSubmit()">
+        <!-- Full Name -->
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" required [(ngModel)]="user.name" name="name">
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required [(ngModel)]="user.email" name="email">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter password" required [(ngModel)]="user.password" name="password">
+        </div>
+
+        <!-- Confirm Password -->
+        <!-- <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
+        </div> -->
+
+        <!-- Register Button -->
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
+
+      <p class="text-center mt-3 mb-0">
+        Already have an account? <a href="login.html" class="text-decoration-none">Login</a>
+      </p>
+    </div>
+    <div *ngIf="message" class="alert mt-3" [class.alert-success]="success" [class.alert-danger]="!success">
+      {{ message }}
+    </div>
+  </div>
